@@ -3,18 +3,24 @@
 }
 
 body {
-    height: 100vh;
-    margin: 0;
 
+    display: grid;
+    justify-content: center;
 }
 
 #piano {
     display: grid;
-    width: 720px;
+    width: 100vw;
+    max-width: 720px;
     position: relative;
 
 }
-
+ul{
+    pointer-events: none;
+}
+li{
+    pointer-events: initial;
+}
 ul#natural {
     display: inline-flex;
     padding: 0;
@@ -25,9 +31,9 @@ ul#acidentada {
     grid-template-columns: repeat(72, calc(100%/72));
     padding: 0;
     position: absolute;
-    top: 0;
     width: 100%;
     height: 75%;
+
 }
 
 li {
@@ -57,27 +63,27 @@ li {
 
 }
 
-#doA {
+#doSharp {
     grid-column-start: 7;
     grid-column-end: 13;
 }
 
-#reA {
+#reSharp {
     grid-column-start: 16;
     grid-column-end: 22;
 }
 
-#faA {
+#faSharp {
     grid-column-start: 34;
     grid-column-end: 40;
 }
 
-#solA {
+#solSharp {
     grid-column-start: 43;
     grid-column-end: 49;
 }
 
-#laA {
+#laSharp {
     grid-column-start: 52;
     grid-column-end: 58;
 }
