@@ -19,7 +19,8 @@
     }
 
     document.addEventListener('mousedown', reproduz);
-
+    document.addEventListener('touchstart', reproduz);
+    
     function reproduz(e) {
         const target = e.target;
         let nota = target.dataset.note;
