@@ -18,12 +18,12 @@
 
     }
 
-    document.addEventListener('click', reproduz);
+    document.addEventListener('mousedown', reproduz);
 
     function reproduz(e) {
         const target = e.target;
         let nota = target.dataset.note;
         notas[nota]?.play()
-       console.log(nota)
+
     }
 })();
