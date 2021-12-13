@@ -7,27 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piano</title>
     <link rel="stylesheet" href="main.css" type="text/css">
+    <script src="index.js"> </script>
 </head>
 
 <body>
     <div id='piano'>
         <ul id='natural'>
-            <li>Do</li>
-            <li>Re</li>
-            <li>Mi</li>
-            <li>Fa</li>
-            <li>Sol</li>
-            <li>La</li>
-            <li>Si</li>
-            <li>Do</li>
+            <li data-note="c">C</li>
+            <li data-note="d">D</li>
+            <li data-note="e">E</li>
+            <li data-note="f">F</li>
+            <li data-note="g">G</li>
+            <li data-note="a">A</li>
+            <li data-note="b">B</li>
+            <li data-note="c2">C</li>
         </ul>
         <ul id='acidentada'>
-            <li id='doA'>Do</li>
-            <li id='reA'>Re</li>
-
-            <li id="faA">Fa</li>
-            <li id="solA">Sol</li>
-            <li id="laA">La</li>
+            <li id='doSharp' data-note="c_sharp">C#</li>
+            <li id='reSharp' data-note="d_sharp">D#</li>
+            
+            <li id="faSharp" data-note="f_sharp">F#</li>
+            <li id="solSharp" data-note="g_sharp">G#</li>
+            <li id="laSharp" data-note="a_sharp">A#</li>
 
         </ul>
     </div>
