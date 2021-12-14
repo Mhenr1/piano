@@ -52,13 +52,13 @@ li {
 }
 
 #natural li {
-    background-color:  #f9f1f1;
+    background-color: #f9f1f1;
     border: 1px black solid;
     width: calc(100% / 8);
     height: 100vh;
     max-height: 350px;
     list-style-type: none;
-    box-shadow:  1px 5px 6px 0px #000000;
+    box-shadow: 1px 5px 6px 0px #000000;
 }
 
 #natural li:active {
@@ -75,11 +75,12 @@ li {
     width: 100%;
     top: 0;
     z-index: 2;
-    box-shadow:  1px 5px 6px 0px #000000;
+    box-shadow: 1px 5px 6px 0px #000000;
 
 }
-#acidentada li:active{
-    box-shadow:  none;
+
+#acidentada li:active {
+    box-shadow: none;
     height: calc(100% + 5px);
 }
 
@@ -106,4 +107,14 @@ li {
 #laSharp {
     grid-column-start: 52;
     grid-column-end: 58;
+}
+
+@media only screen and (hover: none) and (pointer: coarse) and (orientation: portrait) {
+
+
+    body {
+        rotate: 90deg;
+        height: 100vw;
+
+    }
 }
