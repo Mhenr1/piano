@@ -5,7 +5,7 @@
 
 body {
     background: #7c7c7c;
-    margin:0;
+    margin: 0;
 }
 
 #piano {
@@ -18,7 +18,7 @@ body {
 
 ul {
     pointer-events: none;
-    margin-top: 0;
+    margin: 0;
 }
 
 li {
@@ -46,6 +46,7 @@ li {
     align-items: end;
     justify-content: center;
     cursor: pointer;
+    box-shadow: 1px 5px 6px 0px #000000;
 }
 
 #natural li {
@@ -55,13 +56,15 @@ li {
     height: 100vh;
     max-height: 350px;
     list-style-type: none;
-    box-shadow: 1px 5px 6px 0px #000000;
+
 }
 
-#natural li:active {
+#natural li:active,
+#acidentada li:active {
     box-shadow: none;
     height: calc(100% + 5px);
 }
+
 
 #acidentada li {
     color: wheat;
@@ -72,14 +75,10 @@ li {
     width: 100%;
     top: 0;
     z-index: 2;
-    box-shadow: 1px 5px 6px 0px #000000;
+
 
 }
 
-#acidentada li:active {
-    box-shadow: none;
-    height: calc(100% + 5px);
-}
 
 #doSharp {
     grid-column-start: 7;
@@ -107,14 +106,90 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
-    body{
-      min-height: 100vh;
-    }
-    #piano {
-        right: 100%;
-        transform: rotate(-90deg);
-        transform-origin: 100% 0;
-        line-height: 100%;
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      
+        
     }
 
+    #piano {
+        max-width: 400px;
+        margin: 0;
+    }
+
+    li {
+        border-radius: 0 10px 10px 0;
+        box-shadow: 5px 1px 6px 0px #000000;
+        writing-mode: sideways-lr;
+    }
+
+
+    ul#natural {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 600px;
+        max-height: 90vh;
+        margin: 0;
+
+    }
+
+
+    #natural li {
+        width: calc(100% - 10px);
+        height: calc(100% / 8);
+
+    }
+
+    ul#acidentada {
+        grid-template-rows: repeat(72, calc(100%/72));
+        grid-template-columns: 1fr;
+        padding: 0;
+        position: absolute;
+        width: 75%;
+        height: 100%;
+
+    }
+
+    #natural li:active {
+        height: calc(100% / 8);
+        width: calc(100vw - 5px);
+    }
+
+    #acidentada li:active {
+        height: 100%;
+        width: calc(100% + 5px);
+    }
+
+    #acidentada * {
+        grid-column-start: 1;
+
+    }
+
+    #doSharp {
+        grid-row-start: 61;
+        grid-row-end: 67;
+    }
+
+    #reSharp {
+        grid-row-start: 52;
+        grid-row-end: 58;
+    }
+
+    #faSharp {
+        grid-row-start: 34;
+        grid-row-end: 40;
+    }
+
+    #solSharp {
+        grid-row-start: 25;
+        grid-row-end: 31;
+    }
+
+    #laSharp {
+        grid-row-start: 16;
+        grid-row-end: 22;
+
+    }
 }
